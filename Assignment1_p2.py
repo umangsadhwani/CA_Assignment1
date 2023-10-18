@@ -12,6 +12,7 @@ from sklearn import preprocessing as p
 from scipy.stats import f
 from sklearn.metrics import mean_squared_error, mean_absolute_error ,r2_score
 import sys
+import matplotlib.pyplot as plt
 
 
 # taking the csv file as input to create the model
@@ -58,12 +59,6 @@ print("y values :- \n",y)
 # assigning x as the dataframe 
 x=df
 print("x values :- \n",x)
-
-
-
-# creating a heatmap of the correlation matrix 
-fig,axis = plt.subplots(figsize = (20,12))
-sns.heatmap(x.corr(),annot=True)
 
 
 
@@ -179,5 +174,5 @@ data = {
 dfr = pd.DataFrame(data)
 sns.scatterplot(data=dfr, x="predicted", y="residuals")
 
-
+plt.savefig(file[:-4] +"residual.png")
 # ##### 
