@@ -83,7 +83,7 @@ print("X_train :-\n",X_train)
 
 # mean of all the columns of the training set 
 df2 = X_train.mean(axis=0)
-print(df2)
+print("\n mean of all the columns :- \n ",df2)
 
 
 
