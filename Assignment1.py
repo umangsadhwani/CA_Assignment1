@@ -11,11 +11,14 @@ from sklearn.model_selection import train_test_split
 from sklearn import preprocessing as p
 from scipy.stats import f
 from sklearn.metrics import mean_squared_error, mean_absolute_error ,r2_score
-
+import sys
 
 
 # taking the csv file as input to create the model
-file=input("csv file_name : ")
+if len(sys.argv) < 2:
+    file=input("csv file_name : ")
+else:
+    file = sys.argv[1]
 
 
 # creating a pandas dataframe using the values obtained in the csv
